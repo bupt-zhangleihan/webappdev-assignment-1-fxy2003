@@ -1,0 +1,42 @@
+//创建一个程序，列出 3-1 之间的每个第 20 个数字并将其打印到控制台。
+for (let i = 3; i >= 1; i -= 20) {
+  console.log(i);
+}
+
+//给定以下表示所有学生及其成绩的数组，构造一个包含所有通过考试的学生的新数组
+let allStudents = [
+  { name: 'Aa', score: 4 },
+  { name: 'Bb', score: 'B-' },
+  { name: 'Cc', score: 2 },
+  { name: 'Dd', score: 'A' },
+  { name: 'Ee', score: 1 },
+  { name: 'Ff', score: 'C' }
+];
+
+let studentsWhoPass = [];
+
+for (let i = 0; i < allStudents.length; i++) {
+  let student = allStudents[i];
+
+  if (typeof student.score === 'number' && student.score >= 3) {
+    studentsWhoPass.push(student.name);
+  }
+
+  if (typeof student.score === 'string' && (student.score === 'A' || student.score > 'B-')) {
+    studentsWhoPass.push(student.name);
+  }
+}
+
+console.log(studentsWhoPass); 
+
+//创建不同的函数，既返回某些内容的函数，也不返回任何内容的函数。
+function calculateSum(a, b) {
+  return a + b;
+}
+const result = calculateSum(2, 3);
+console.log(result);
+
+function greet(name) {
+  console.log(`My name is ${name}!`);
+}
+greet("Aa");
